@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 84.201.135.164
+IP 84.201.135.164
 
 Frontend https://terennikov.students.nomoredomainsmonster.ru/
 
