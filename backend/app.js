@@ -16,6 +16,8 @@ config();
 const app = express();
 app.use(cors({
   origin: ['http://terennikov.students.nomoredomainsmonster.ru/'],
+  credentials: true,
+  maxAge: 30,
 }));
 app.use(helmet());
 app.use(limiter);
