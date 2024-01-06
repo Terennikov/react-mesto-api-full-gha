@@ -15,7 +15,7 @@ const { DB_CONN = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 config();
 const app = express();
 app.use(cors({
-  origin: ['http://www.mywebsite.com'],
+  origin: ['http://terennikov.students.nomoredomainsmonster.ru/'],
 }));
 app.use(helmet());
 app.use(limiter);
