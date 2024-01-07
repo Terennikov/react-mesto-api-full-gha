@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.terennikov.students.nomoredomainsmonster.ru/'
+export const BASE_URL = 'https://api.terennikov.students.nomoredomainsmonster.ru'
 
 
 const checkResponse = (res) => {
@@ -11,8 +11,12 @@ const checkResponse = (res) => {
 
 //Функция создания запроса
 const request = (url, options) => {
-    return fetch(`${BASE_URL}` + `${url}`, options).then(checkResponse)
+   return fetch(`${BASE_URL}` + `${url}`, options).then(checkResponse)
 }
+
+// function request(url, options) {
+//     return fetch(`${BASE_URL}${url}`, options).then(checkResponse);
+//   }
 
 export const register = ({ password, email }) => {
     return request(`/signup`, {

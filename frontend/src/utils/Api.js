@@ -125,7 +125,7 @@ export class Api {
 
 
 const api = new Api({
-    baseUrl: 'https://api.terennikov.students.nomoredomainsmonster.ru/',
+    baseUrl: 'https://api.terennikov.students.nomoredomainsmonster.ru',
 });
 
 export default api;

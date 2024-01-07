@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import helmet from 'helmet';
 import { config } from 'dotenv';
 import { errors } from 'celebrate';
-import router from './routes/index';
+import router from './routes/index.js';
 import NotFoundError from './utils/errors/NotFoundError';
 import limiter from './utils/rateLimetid';
 import errorHandler from './utils/errors/errorHandler';
@@ -14,11 +14,7 @@ const { PORT = 3000 } = process.env;
 const { DB_CONN = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 config();
 const app = express();
-app.use(cors({
-  origin: ['http://terennikov.students.nomoredomainsmonster.ru/'],
-  credentials: true,
-  maxAge: 30,
-}));
+app.use(cors());
 app.use(helmet());
 app.use(limiter);
 
