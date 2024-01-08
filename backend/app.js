@@ -27,10 +27,10 @@ app.get('/crash-test', () => {
   }, 0);
 });
 app.use(router);
-app.use(errorLogger);
 app.use((req, res) => {
   throw new NotFoundError('Страница не найдена');
 });
+app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 

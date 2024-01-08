@@ -14,7 +14,7 @@ const auth = (req, res, next) => {
   try {
     payload = Jwt.verify(token, NODE_ENV ? JWT_SECRET : 'dev-secret');
   } catch (err) {
-    return new UnauthorizedError('Неверный токен авторизации');
+    throw new UnauthorizedError('Неверный токен авторизации');
   }
 
   req.user = payload;
