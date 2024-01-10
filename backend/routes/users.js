@@ -2,8 +2,8 @@ import { Router } from 'express';
 import { celebrate, Joi } from 'celebrate';
 import {
   getUsers, getUsersById, updateProfile, updateAvatar, getCurrentUser,
-} from '../controllers/users';
-import URLREGEXP from '../utils/constans';
+} from '../controllers/users.js';
+import URLREGEXP from '../utils/constans.js';
 
 const userRouter = Router();
 

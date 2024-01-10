@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import userRouter from './users';
-import cardRouter from './cards';
-import auth from '../middlewares/auth';
-import { checkSigninValidation, checkSignupValidation } from '../middlewares/joiAuthValidation';
-import { createUser, login } from '../controllers/users';
+import userRouter from './users.js';
+import cardRouter from './cards.js';
+import auth from '../middlewares/auth.js';
+import { checkSigninValidation, checkSignupValidation } from '../middlewares/joiAuthValidation.js';
+import { createUser, login } from '../controllers/users.js';
 
 const router = Router();
 router.post('/signup', checkSignupValidation, createUser);

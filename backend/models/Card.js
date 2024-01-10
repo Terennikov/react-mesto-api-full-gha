@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import URLREGEXP from '../utils/constans';
+import URLREGEXP from '../utils/constans.js';
 
 const cardSheme = new mongoose.Schema(
   {

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import isEmail from 'validator/lib/isEmail';
-import URLREGEXP from '../utils/constans';
+import isEmail from 'validator/lib/isEmail.js';
+import URLREGEXP from '../utils/constans.js';
 
 const userSheme = new mongoose.Schema(
   {

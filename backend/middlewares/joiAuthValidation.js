@@ -1,5 +1,5 @@
 import { celebrate, Joi } from 'celebrate';
-import URLREGEXP from '../utils/constans';
+import URLREGEXP from '../utils/constans.js';
 
 export const checkSignupValidation = celebrate({
   body: Joi.object().keys({

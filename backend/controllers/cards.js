@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import { StatusCodes } from 'http-status-codes';
-import Card from '../models/Card';
-import BadRequestError from '../utils/errors/BadRequestError';
-import NotFoundError from '../utils/errors/NotFoundError';
-import NoAccessRightsError from '../utils/errors/NoAccessRightsError';
+import Card from '../models/Card.js';
+import BadRequestError from '../utils/errors/BadRequestError.js';
+import NotFoundError from '../utils/errors/NotFoundError.js';
+import NoAccessRightsError from '../utils/errors/NoAccessRightsError.js';
 
 export const getCards = async (req, res, next) => {
   try {

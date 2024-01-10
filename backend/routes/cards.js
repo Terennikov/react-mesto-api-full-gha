@@ -2,8 +2,8 @@ import { Router } from 'express';
 import { celebrate, Joi } from 'celebrate';
 import {
   createCard, getCards, deleteCard, likeCard, deleteLike,
-} from '../controllers/cards';
-import URLREGEXP from '../utils/constans';
+} from '../controllers/cards.js';
+import URLREGEXP from '../utils/constans.js';
 
 const cardRouter = Router();
 

@@ -1,5 +1,5 @@
 import Jwt from 'jsonwebtoken';
-import UnauthorizedError from '../utils/errors/UnauthorizedError';
+import UnauthorizedError from '../utils/errors/UnauthorizedError.js';
 
 const { JWT_SECRET, NODE_ENV } = process.env;
 const auth = (req, res, next) => {

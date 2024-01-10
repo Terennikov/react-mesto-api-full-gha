@@ -4,11 +4,11 @@ import helmet from 'helmet';
 import { config } from 'dotenv';
 import { errors } from 'celebrate';
 import router from './routes/index.js';
-import NotFoundError from './utils/errors/NotFoundError';
-import limiter from './utils/rateLimetid';
-import errorHandler from './utils/errors/errorHandler';
+import NotFoundError from './utils/errors/NotFoundError.js';
+import limiter from './utils/rateLimetid.js';
+import errorHandler from './utils/errors/errorHandler.js';
 import cors from 'cors';
-import { requestLogger, errorLogger } from './middlewares/logger';
+import { requestLogger, errorLogger } from './middlewares/logger.js';
 
 const { PORT = 3000 } = process.env;
 const { DB_CONN = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;

@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 import { StatusCodes } from 'http-status-codes';
 import bcrypt from 'bcrypt';
-import User from '../models/User';
-import auth from '../utils/jwt';
-import BadRequestError from '../utils/errors/BadRequestError';
-import NotFoundError from '../utils/errors/NotFoundError';
-import UnauthorizedError from '../utils/errors/UnauthorizedError';
-import UserAlreadExistsError from '../utils/errors/UserAlreadyExistsError';
+import User from '../models/User.js';
+import auth from '../utils/jwt.js';
+import BadRequestError from '../utils/errors/BadRequestError.js';
+import NotFoundError from '../utils/errors/NotFoundError.js';
+import UnauthorizedError from '../utils/errors/UnauthorizedError.js';
+import UserAlreadExistsError from '../utils/errors/UserAlreadyExistsError.js';
 
 const ERROR_CODE_DUPLICATE_MONGO = 11000;
 
