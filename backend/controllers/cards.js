@@ -25,9 +25,6 @@ export const createCard = async (req, res, next) => {
       runValidators: true,
     }));
   } catch (error) {
-    // if (error instanceof mongoose.Error.CastError) {
-    //   return next(new BadRequestError(error));
-    // }
     if (error instanceof mongoose.Error.ValidationError) {
       return next(new BadRequestError(error));
     }

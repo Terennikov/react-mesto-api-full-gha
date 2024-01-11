@@ -65,19 +65,15 @@ export const createUser = async (req, res, next) => {
 };
 
 export const getCurrentUser = async (req, res, next) => {
-  // try {
+  try {
     const currentUser = await User.findById(req.user._id);
-
     if (!currentUser) {
       throw new NotFoundError('Пользователь с таким id не найден');
     }
     return res.status(StatusCodes.OK).send(currentUser);
-  // } catch (error) {
-  //   if (error instanceof mongoose.Error.CastError) {
-  //     return next(new BadRequestError('Передан не валидный id'));
-  //   }
-  //   return next(error);
-  // }
+  } catch (error) {
+    return next(error);
+  }
 };
 
 export const login = async (req, res, next) => {

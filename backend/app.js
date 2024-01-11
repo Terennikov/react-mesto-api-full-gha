@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import { config } from 'dotenv';
 import { errors } from 'celebrate';
 import router from './routes/index.js';
-import NotFoundError from './utils/errors/NotFoundError.js';
+import NotFoundError from './utils/errors/NotFoundError.js'
 import limiter from './utils/rateLimetid.js';
 import errorHandler from './utils/errors/errorHandler.js';
 import cors from 'cors';
@@ -17,7 +17,7 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(limiter);
-
+ 
 mongoose.connect(DB_CONN);
 app.use(json());
 app.use(requestLogger);
